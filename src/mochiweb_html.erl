@@ -384,7 +384,7 @@ norm({Tag, Attrs}) ->
 norm(Tag) when is_binary(Tag) ->
     Tag;
 norm(Tag) ->
-    list_to_binary(string:to_lower(Tag)).
+    list_to_binary(Tag).
 
 stack(T1={TN, _, _}, Stack=[{TN, _, _} | _Rest])
   when TN =:= <<"li">> orelse TN =:= <<"option">> ->
